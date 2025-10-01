@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Happy Girlfriend Day Silfa</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fce4ec;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    flex-direction: column;
+  }
+
+  h1 {
+    color: #d81b60;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #f48fb1;
+  }
+
+  .heart {
+    position: relative;
+    width: 200px;
+    height: 180px;
+    margin-bottom: 40px;
+  }
+
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 160px;
+    background: #d81b60;
+    border-radius: 100px 100px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 100% 100%;
+    animation: bloom 3s ease forwards;
+  }
+
+  .heart::after {
+    left: 100px;
+    transform: rotate(45deg);
+    transform-origin: 0 100%;
+  }
+
+  @keyframes bloom {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    100% {
+      width: 100px;
+      height: 160px;
+      opacity: 1;
+    }
+  }
+
+  .flower {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    animation: flowerBloom 3s ease forwards;
+  }
+
+  .petal {
+    position: absolute;
+    width: 40px;
+    height: 70px;
+    background: #f06292;
+    border-radius: 50% 50% 0 0;
+    opacity: 0;
+    animation: petalFadeIn 3s ease forwards;
+  }
+
+  .petal:nth-child(1) {
+    top: 0;
+    left: 30px;
+    transform: rotate(0deg);
+    animation-delay: 0.5s;
+  }
+  .petal:nth-child(2) {
+    top: 10px;
+    left: 60px;
+    transform: rotate(45deg);
+    animation-delay: 1s;
+  }
+  .petal:nth-child(3) {
+    top: 10px;
+    left: 0;
+    transform: rotate(-45deg);
+    animation-delay: 1.5s;
+  }
+  .petal:nth-child(4) {
+    top: 40px;
+    left: 50px;
+    transform: rotate(90deg);
+    animation-delay: 2s;
+  }
+  .petal:nth-child(5) {
+    top: 40px;
+    left: 10px;
+    transform: rotate(-90deg);
+    animation-delay: 2.5s;
+  }
+
+  @keyframes petalFadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes flowerBloom {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>Happy Girlfriendday Silfa</h1>
+
+<div class="heart"></div>
+
+<div class="flower">
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+</div>
+
+</body>
+</html>
